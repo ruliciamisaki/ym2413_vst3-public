@@ -1,0 +1,7 @@
+{
+  "name": "vst2413-vst3",
+  "version": "1.0.0",
+  "dependencies": [
+    "vst3sdk-source"
+  ]
+}

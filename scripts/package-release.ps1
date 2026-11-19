@@ -18,7 +18,7 @@ $zip = Join-Path $OutputDir "$packageName.zip"
 if (Test-Path $stage) { throw "Staging directory already exists: $stage" }
 if (Test-Path $zip) { throw "Package already exists: $zip" }
 
-$bundles = @('vst2413p', 'vst2413r', 'vst2413s') | ForEach-Object {
+$bundles = @('VST2413P', 'VST2413R', 'VST2413S') | ForEach-Object {
     Join-Path $BuildDir "VST3\\$Configuration\\$_.vst3"
 }
 foreach ($bundle in $bundles) {

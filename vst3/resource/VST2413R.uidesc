@@ -2,24 +2,29 @@
 <vstgui-ui-description version="1">
   <fonts/>
   <colors>
-    <color name="Case" rgba="#202631ff"/><color name="Case Edge" rgba="#0d1118ff"/>
-    <color name="Panel" rgba="#39414bff"/><color name="Panel Light" rgba="#56616dff"/>
-    <color name="Screen" rgba="#172b24ff"/><color name="LCD" rgba="#99d4aaff"/>
-    <color name="Accent" rgba="#f0b43cff"/><color name="Ink" rgba="#e9e3d4ff"/>
-    <color name="Muted" rgba="#aab1b8ff"/><color name="Kick" rgba="#d36b4bff"/>
+    <color name="Case" rgba="#262626ff"/>
+    <color name="Case Edge" rgba="#161616ff"/>
+    <color name="Panel" rgba="#393939ff"/>
+    <color name="Panel Light" rgba="#525252ff"/>
+    <color name="Screen" rgba="#071908ff"/>
+    <color name="LCD" rgba="#6fdc8cff"/>
+    <color name="Accent" rgba="#f1c21bff"/>
+    <color name="Ink" rgba="#f4f4f4ff"/>
+    <color name="Muted" rgba="#c6c6c6ff"/>
+    <color name="Kick" rgba="#eb6200ff"/>
   </colors>
-  <template background-color="Case" background-color-draw-style="filled and stroked" class="CViewContainer" mouse-enabled="true" name="view" origin="0, 0" size="560, 280" transparent="false">
-    <view back-color="Case Edge" class="CTextLabel" font="~ NormalFontVeryBig" font-color="Accent" frame-width="0" mouse-enabled="false" origin="18, 14" size="524, 42" style-no-frame="true" text-alignment="left" text-inset="14, 0" title="VST2413" transparent="false"/>
-    <view back-color="Case Edge" class="CTextLabel" font="~ NormalFontSmaller" font-color="Muted" frame-width="0" mouse-enabled="false" origin="390, 23" size="135, 24" style-no-frame="true" text-alignment="right" title="OPLL / YM2413  R" transparent="true"/>
-    <view background-color="Panel" background-color-draw-style="filled and stroked" class="CViewContainer" frame-color="Panel Light" frame-width="1" mouse-enabled="false" origin="18, 68" size="524, 192" transparent="false">
-      <view back-color="Panel" class="CTextLabel" font="~ NormalFontSmall" font-color="Muted" frame-width="0" mouse-enabled="false" origin="18, 12" size="488, 22" style-no-frame="true" text-alignment="left" title="GM DRUM NOTE MAP" transparent="true"/>
-      <view back-color="Kick" class="CTextLabel" font="~ NormalFontBig" font-color="Ink" frame-color="Case Edge" frame-width="2" mouse-enabled="false" origin="18, 43" round-rect-radius="5" size="92, 74" style-round-rect="true" text-alignment="center" title="KICK&#10;36" transparent="false"/>
-      <view back-color="Screen" class="CTextLabel" font="~ NormalFontBig" font-color="LCD" frame-color="Case Edge" frame-width="2" mouse-enabled="false" origin="116, 43" round-rect-radius="5" size="92, 74" style-round-rect="true" text-alignment="center" title="SNARE&#10;38" transparent="false"/>
-      <view back-color="Screen" class="CTextLabel" font="~ NormalFontBig" font-color="LCD" frame-color="Case Edge" frame-width="2" mouse-enabled="false" origin="214, 43" round-rect-radius="5" size="92, 74" style-round-rect="true" text-alignment="center" title="HAT&#10;42 / 44" transparent="false"/>
-      <view back-color="Screen" class="CTextLabel" font="~ NormalFontBig" font-color="LCD" frame-color="Case Edge" frame-width="2" mouse-enabled="false" origin="312, 43" round-rect-radius="5" size="92, 74" style-round-rect="true" text-alignment="center" title="TOM&#10;43 / 47 / 50" transparent="false"/>
-      <view back-color="Screen" class="CTextLabel" font="~ NormalFontBig" font-color="LCD" frame-color="Case Edge" frame-width="2" mouse-enabled="false" origin="410, 43" round-rect-radius="5" size="96, 74" style-round-rect="true" text-alignment="center" title="CYMBAL&#10;49 / 51" transparent="false"/>
-      <view back-color="Panel" class="CTextLabel" font="~ NormalFontSmaller" font-color="Ink" frame-width="0" mouse-enabled="false" origin="18, 132" size="488, 23" style-no-frame="true" text-alignment="center" title="Velocity controls each drum level  /  Mono OPLL rhythm output" transparent="true"/>
-      <view back-color="Panel" class="CTextLabel" font="~ NormalFontSmaller" font-color="Muted" frame-width="0" mouse-enabled="false" origin="18, 156" size="488, 20" style-no-frame="true" text-alignment="center" title="Use a MIDI drum track or pads mapped to the notes above" transparent="true"/>
+  <template class="CViewContainer" name="view" background-color="Case" background-color-draw-style="filled and stroked" mouse-enabled="true" origin="0, 0" size="560, 280" transparent="false">
+    <view class="CTextLabel" title="VST2413" back-color="Case Edge" font="~ NormalFontVeryBig" font-color="Accent" frame-width="0" mouse-enabled="false" origin="18, 14" size="524, 42" style-no-frame="true" text-alignment="left" text-inset="14, 0" transparent="false"/>
+    <view class="CTextLabel" title="OPLL / YM2413  R" back-color="Case Edge" font="~ NormalFontSmaller" font-color="Muted" frame-width="0" mouse-enabled="false" origin="390, 23" size="135, 24" style-no-frame="true" text-alignment="right" transparent="true"/>
+    <view class="CViewContainer" background-color="Panel" background-color-draw-style="filled and stroked" frame-color="Panel Light" frame-width="1" mouse-enabled="false" origin="18, 68" size="524, 192" transparent="false">
+      <view class="CTextLabel" title="GM DRUM NOTE MAP" back-color="Panel" font="~ NormalFontSmall" font-color="Muted" frame-width="0" mouse-enabled="false" origin="18, 12" size="488, 22" style-no-frame="true" text-alignment="left" transparent="true"/>
+      <view class="CMultiLineTextLabel" line-layout="truncate" vertical-centered="true" title="KICK&#10;36" back-color="Kick" font="~ NormalFontBig" font-color="Ink" frame-color="Case Edge" frame-width="2" mouse-enabled="false" origin="18, 43" round-rect-radius="5" size="92, 74" style-round-rect="true" text-alignment="center" transparent="false"/>
+      <view class="CMultiLineTextLabel" line-layout="truncate" vertical-centered="true" title="SNARE&#10;38" back-color="Screen" font="~ NormalFontBig" font-color="LCD" frame-color="Case Edge" frame-width="2" mouse-enabled="false" origin="116, 43" round-rect-radius="5" size="92, 74" style-round-rect="true" text-alignment="center" transparent="false"/>
+      <view class="CMultiLineTextLabel" line-layout="truncate" vertical-centered="true" title="HAT&#10;42 / 44" back-color="Screen" font="~ NormalFontBig" font-color="LCD" frame-color="Case Edge" frame-width="2" mouse-enabled="false" origin="214, 43" round-rect-radius="5" size="92, 74" style-round-rect="true" text-alignment="center" transparent="false"/>
+      <view class="CMultiLineTextLabel" line-layout="truncate" vertical-centered="true" title="TOM&#10;43 / 47 / 50" back-color="Screen" font="~ NormalFontBig" font-color="LCD" frame-color="Case Edge" frame-width="2" mouse-enabled="false" origin="312, 43" round-rect-radius="5" size="92, 74" style-round-rect="true" text-alignment="center" transparent="false"/>
+      <view class="CMultiLineTextLabel" line-layout="truncate" vertical-centered="true" title="CYMBAL&#10;49 / 51" back-color="Screen" font="~ NormalFontBig" font-color="LCD" frame-color="Case Edge" frame-width="2" mouse-enabled="false" origin="410, 43" round-rect-radius="5" size="96, 74" style-round-rect="true" text-alignment="center" transparent="false"/>
+      <view class="CTextLabel" title="Velocity controls each drum level  /  Mono OPLL rhythm output" back-color="Panel" font="~ NormalFontSmaller" font-color="Ink" frame-width="0" mouse-enabled="false" origin="18, 132" size="488, 23" style-no-frame="true" text-alignment="center" transparent="true"/>
+      <view class="CTextLabel" title="Use a MIDI drum track or pads mapped to the notes above" back-color="Panel" font="~ NormalFontSmaller" font-color="Muted" frame-width="0" mouse-enabled="false" origin="18, 156" size="488, 20" style-no-frame="true" text-alignment="center" transparent="true"/>
     </view>
   </template>
 </vstgui-ui-description>

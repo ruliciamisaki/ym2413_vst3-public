@@ -8,8 +8,8 @@ destination="${VST3_DESTINATION:-$HOME/Library/Audio/Plug-Ins/VST3}"
 plugin="${1:-all}"
 
 case "$plugin" in
-  all) names=(vst2413p vst2413r vst2413s) ;;
-  p|r|s) names=("vst2413$plugin") ;;
+  all) names=(VST2413P VST2413R VST2413S) ;;
+  p|r|s) names=("VST2413$(echo "$plugin" | tr prs PRS)") ;;
   *) echo "Usage: $0 [all|p|r|s]" >&2; exit 2 ;;
 esac
 

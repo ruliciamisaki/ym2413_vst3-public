@@ -2,41 +2,41 @@
 <vstgui-ui-description version="1">
   <fonts/>
   <colors>
-    <color name="Case" rgba="#202631ff"/>
-    <color name="Case Edge" rgba="#0d1118ff"/>
-    <color name="Panel" rgba="#39414bff"/>
-    <color name="Panel Light" rgba="#56616dff"/>
-    <color name="Screen" rgba="#172b24ff"/>
-    <color name="LCD" rgba="#99d4aaff"/>
-    <color name="Accent" rgba="#f0b43cff"/>
-    <color name="Ink" rgba="#e9e3d4ff"/>
-    <color name="Muted" rgba="#aab1b8ff"/>
-    <color name="Knob" rgba="#20242aff"/>
+    <color name="Case" rgba="#262626ff"/>
+    <color name="Case Edge" rgba="#161616ff"/>
+    <color name="Panel" rgba="#393939ff"/>
+    <color name="Panel Light" rgba="#525252ff"/>
+    <color name="Screen" rgba="#071908ff"/>
+    <color name="LCD" rgba="#6fdc8cff"/>
+    <color name="Accent" rgba="#f1c21bff"/>
+    <color name="Ink" rgba="#f4f4f4ff"/>
+    <color name="Muted" rgba="#c6c6c6ff"/>
+    <color name="Knob" rgba="#161616ff"/>
   </colors>
   <control-tags>
     <control-tag name="Instrument" tag="0"/>
     <control-tag name="PitchWheelRange" tag="1"/>
     <control-tag name="FineTune" tag="2"/>
   </control-tags>
-  <template background-color="Case" background-color-draw-style="filled and stroked" class="CViewContainer" mouse-enabled="true" name="view" opacity="1" origin="0, 0" size="560, 280" transparent="false" wants-focus="false">
-    <view back-color="Case Edge" class="CTextLabel" font="~ NormalFontVeryBig" font-antialias="true" font-color="Accent" frame-color="Case Edge" frame-width="0" mouse-enabled="false" origin="18, 14" size="524, 42" style-no-frame="true" text-alignment="left" text-inset="14, 0" title="VST2413" transparent="false"/>
-    <view back-color="Case Edge" class="CTextLabel" font="~ NormalFontSmaller" font-antialias="true" font-color="Muted" frame-color="Case Edge" frame-width="0" mouse-enabled="false" origin="390, 23" size="135, 24" style-no-frame="true" text-alignment="right" title="OPLL / YM2413  P" transparent="true"/>
+  <template class="CViewContainer" name="view" background-color="Case" background-color-draw-style="filled and stroked" mouse-enabled="true" opacity="1" origin="0, 0" size="560, 280" transparent="false" wants-focus="false">
+    <view class="CTextLabel" title="VST2413" back-color="Case Edge" font="~ NormalFontVeryBig" font-antialias="true" font-color="Accent" frame-color="Case Edge" frame-width="0" mouse-enabled="false" origin="18, 14" size="524, 42" style-no-frame="true" text-alignment="left" text-inset="14, 0" transparent="false"/>
+    <view class="CTextLabel" title="OPLL / YM2413  P" back-color="Case Edge" font="~ NormalFontSmaller" font-antialias="true" font-color="Muted" frame-color="Case Edge" frame-width="0" mouse-enabled="false" origin="390, 23" size="135, 24" style-no-frame="true" text-alignment="right" transparent="true"/>
 
-    <view background-color="Panel" background-color-draw-style="filled and stroked" class="CViewContainer" frame-color="Panel Light" frame-width="1" mouse-enabled="true" origin="18, 68" size="330, 192" transparent="false">
-      <view back-color="Panel" class="CTextLabel" font="~ NormalFontSmall" font-antialias="true" font-color="Muted" frame-color="Panel" frame-width="0" mouse-enabled="false" origin="18, 14" size="294, 20" style-no-frame="true" text-alignment="left" title="INSTRUMENT PROGRAM" transparent="true"/>
-      <view back-color="Screen" class="COptionMenu" control-tag="Instrument" default-value="0" font="~ NormalFontBig" font-antialias="true" font-color="LCD" frame-color="Case Edge" frame-width="2" max-value="1" menu-check-style="true" menu-popup-style="true" min-value="0" mouse-enabled="true" opacity="1" origin="18, 40" round-rect-radius="3" shadow-color="Case Edge" size="294, 48" style-no-draw="false" style-no-frame="false" style-no-text="false" style-round-rect="true" text-alignment="left" text-inset="14, 0" transparent="false" wants-focus="true" wheel-inc-value="0.0714286"/>
-      <view back-color="Panel" class="CTextLabel" font="~ NormalFontSmaller" font-antialias="true" font-color="Ink" frame-color="Panel" frame-width="0" mouse-enabled="false" origin="18, 106" size="294, 22" style-no-frame="true" text-alignment="left" title="15 built-in OPLL voices" transparent="true"/>
-      <view back-color="Panel" class="CTextLabel" font="~ NormalFontSmaller" font-antialias="true" font-color="Muted" frame-color="Panel" frame-width="0" mouse-enabled="false" origin="18, 130" size="294, 42" style-no-frame="true" text-alignment="left" title="Violin / Guitar / Piano / Flute / Organ / Bass ..." transparent="true"/>
+    <view class="CViewContainer" background-color="Panel" background-color-draw-style="filled and stroked" frame-color="Panel Light" frame-width="1" mouse-enabled="true" origin="18, 68" size="330, 192" transparent="false">
+      <view class="CTextLabel" title="INSTRUMENT PROGRAM" back-color="Panel" font="~ NormalFontSmall" font-antialias="true" font-color="Muted" frame-color="Panel" frame-width="0" mouse-enabled="false" origin="18, 14" size="294, 20" style-no-frame="true" text-alignment="left" transparent="true"/>
+      <view class="COptionMenu" back-color="Screen" control-tag="Instrument" default-value="0" font="~ NormalFontBig" font-antialias="true" font-color="LCD" frame-color="Case Edge" frame-width="2" max-value="1" menu-check-style="true" menu-popup-style="true" min-value="0" mouse-enabled="true" opacity="1" origin="18, 40" round-rect-radius="3" shadow-color="Case Edge" size="294, 48" style-no-draw="false" style-no-frame="false" style-no-text="false" style-round-rect="true" text-alignment="left" text-inset="14, 0" transparent="false" wants-focus="true" wheel-inc-value="0.0714286"/>
+      <view class="CTextLabel" title="15 built-in OPLL voices" back-color="Panel" font="~ NormalFontSmaller" font-antialias="true" font-color="Ink" frame-color="Panel" frame-width="0" mouse-enabled="false" origin="18, 106" size="294, 22" style-no-frame="true" text-alignment="left" transparent="true"/>
+      <view class="CTextLabel" title="Violin / Guitar / Piano / Flute / Organ / Bass ..." back-color="Panel" font="~ NormalFontSmaller" font-antialias="true" font-color="Muted" frame-color="Panel" frame-width="0" mouse-enabled="false" origin="18, 130" size="294, 42" style-no-frame="true" text-alignment="left" transparent="true"/>
     </view>
 
-    <view background-color="Panel" background-color-draw-style="filled and stroked" class="CViewContainer" frame-color="Panel Light" frame-width="1" mouse-enabled="true" origin="360, 68" size="182, 192" transparent="false">
-      <view back-color="Panel" class="CTextLabel" font="~ NormalFontSmall" font-antialias="true" font-color="Muted" frame-color="Panel" frame-width="0" mouse-enabled="false" origin="10, 14" size="162, 20" style-no-frame="true" text-alignment="center" title="TUNING" transparent="true"/>
-      <view angle-range="270" angle-start="135" circle-drawing="true" class="CKnob" control-tag="PitchWheelRange" corona-color="Accent" corona-drawing="true" corona-inset="7" corona-outline="true" default-value="0.25" handle-color="Ink" handle-line-width="3" handle-shadow-color="Case Edge" max-value="1" min-value="0" mouse-enabled="true" origin="18, 42" size="64, 64" transparent="false" value-inset="8" wants-focus="true" wheel-inc-value="0.01" zoom-factor="10"/>
-      <view angle-range="270" angle-start="135" circle-drawing="true" class="CKnob" control-tag="FineTune" corona-color="LCD" corona-drawing="true" corona-inset="7" corona-outline="true" default-value="0.5" handle-color="Ink" handle-line-width="3" handle-shadow-color="Case Edge" max-value="1" min-value="0" mouse-enabled="true" origin="100, 42" size="64, 64" transparent="false" value-inset="8" wants-focus="true" wheel-inc-value="0.01" zoom-factor="10"/>
-      <view back-color="Panel" class="CTextLabel" font="~ NormalFontSmaller" font-antialias="true" font-color="Ink" frame-color="Panel" frame-width="0" mouse-enabled="false" origin="8, 110" size="84, 30" style-no-frame="true" text-alignment="center" title="P.WHEEL" transparent="true"/>
-      <view back-color="Panel" class="CTextLabel" font="~ NormalFontSmaller" font-antialias="true" font-color="Ink" frame-color="Panel" frame-width="0" mouse-enabled="false" origin="90, 110" size="84, 30" style-no-frame="true" text-alignment="center" title="FINE TUNE" transparent="true"/>
-      <view back-color="Screen" class="CTextEdit" control-tag="PitchWheelRange" default-value="0.25" font="~ NormalFontSmaller" font-antialias="true" font-color="LCD" frame-color="Case Edge" frame-width="1" immediate-text-change="false" max-value="1" min-value="0" mouse-enabled="true" origin="16, 145" round-rect-radius="2" size="68, 27" style-no-frame="false" style-round-rect="true" text-alignment="center" title="3" transparent="false" value-precision="2" wants-focus="true"/>
-      <view back-color="Screen" class="CTextEdit" control-tag="FineTune" default-value="0.5" font="~ NormalFontSmaller" font-antialias="true" font-color="LCD" frame-color="Case Edge" frame-width="1" immediate-text-change="false" max-value="1" min-value="0" mouse-enabled="true" origin="98, 145" round-rect-radius="2" size="68, 27" style-no-frame="false" style-round-rect="true" text-alignment="center" title="0" transparent="false" value-precision="2" wants-focus="true"/>
+    <view class="CViewContainer" background-color="Panel" background-color-draw-style="filled and stroked" frame-color="Panel Light" frame-width="1" mouse-enabled="true" origin="360, 68" size="182, 192" transparent="false">
+      <view class="CTextLabel" title="TUNING" back-color="Panel" font="~ NormalFontSmall" font-antialias="true" font-color="Muted" frame-color="Panel" frame-width="0" mouse-enabled="false" origin="10, 14" size="162, 20" style-no-frame="true" text-alignment="center" transparent="true"/>
+      <view class="CKnob" angle-range="270" angle-start="135" circle-drawing="true" control-tag="PitchWheelRange" corona-color="Accent" corona-drawing="true" corona-inset="7" corona-outline="true" default-value="0.25" handle-color="Ink" handle-line-width="3" handle-shadow-color="Case Edge" max-value="1" min-value="0" mouse-enabled="true" origin="18, 42" size="64, 64" transparent="false" value-inset="8" wants-focus="true" wheel-inc-value="0.01" zoom-factor="10"/>
+      <view class="CKnob" angle-range="270" angle-start="135" circle-drawing="true" control-tag="FineTune" corona-color="LCD" corona-drawing="true" corona-inset="7" corona-outline="true" default-value="0.5" handle-color="Ink" handle-line-width="3" handle-shadow-color="Case Edge" max-value="1" min-value="0" mouse-enabled="true" origin="100, 42" size="64, 64" transparent="false" value-inset="8" wants-focus="true" wheel-inc-value="0.01" zoom-factor="10"/>
+      <view class="CTextLabel" title="P.WHEEL" back-color="Panel" font="~ NormalFontSmaller" font-antialias="true" font-color="Ink" frame-color="Panel" frame-width="0" mouse-enabled="false" origin="8, 110" size="84, 30" style-no-frame="true" text-alignment="center" transparent="true"/>
+      <view class="CTextLabel" title="FINE TUNE" back-color="Panel" font="~ NormalFontSmaller" font-antialias="true" font-color="Ink" frame-color="Panel" frame-width="0" mouse-enabled="false" origin="90, 110" size="84, 30" style-no-frame="true" text-alignment="center" transparent="true"/>
+      <view class="CTextEdit" title="3" back-color="Screen" control-tag="PitchWheelRange" default-value="0.25" font="~ NormalFontSmaller" font-antialias="true" font-color="LCD" frame-color="Case Edge" frame-width="1" immediate-text-change="false" max-value="1" min-value="0" mouse-enabled="true" origin="16, 145" round-rect-radius="2" size="68, 27" style-no-frame="false" style-round-rect="true" text-alignment="center" transparent="false" value-precision="2" wants-focus="true"/>
+      <view class="CTextEdit" title="0" back-color="Screen" control-tag="FineTune" default-value="0.5" font="~ NormalFontSmaller" font-antialias="true" font-color="LCD" frame-color="Case Edge" frame-width="1" immediate-text-change="false" max-value="1" min-value="0" mouse-enabled="true" origin="98, 145" round-rect-radius="2" size="68, 27" style-no-frame="false" style-round-rect="true" text-alignment="center" transparent="false" value-precision="2" wants-focus="true"/>
     </view>
   </template>
 </vstgui-ui-description>

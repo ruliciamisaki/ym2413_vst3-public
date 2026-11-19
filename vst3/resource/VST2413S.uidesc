@@ -2,117 +2,146 @@
 <vstgui-ui-description version="1">
   <fonts/>
   <colors>
-    <color name="Case" rgba="#202631ff"/><color name="Case Edge" rgba="#0d1118ff"/>
-    <color name="Panel" rgba="#39414bff"/><color name="Panel Light" rgba="#56616dff"/>
-    <color name="Screen" rgba="#172b24ff"/><color name="LCD" rgba="#99d4aaff"/>
-    <color name="Accent" rgba="#f0b43cff"/><color name="Ink" rgba="#e9e3d4ff"/>
-    <color name="Muted" rgba="#aab1b8ff"/><color name="Switch" rgba="#29313aff"/>
+    <color name="Case" rgba="#262626ff"/>
+    <color name="Case Edge" rgba="#161616ff"/>
+    <color name="Panel" rgba="#393939ff"/>
+    <color name="Panel Light" rgba="#525252ff"/>
+    <color name="Screen" rgba="#071908ff"/>
+    <color name="LCD" rgba="#6fdc8cff"/>
+    <color name="Accent" rgba="#f1c21bff"/>
+    <color name="Ink" rgba="#f4f4f4ff"/>
+    <color name="Muted" rgba="#c6c6c6ff"/>
+    <color name="Ink Inverse" rgba="#161616ff"/>
+    <color name="Switch" rgba="#262626ff"/>
   </colors>
+  <gradients>
+    <gradient name="Button">
+      <color-stop rgba="#262626ff" start="0"/>
+      <color-stop rgba="#262626ff" start="1"/>
+    </gradient>
+    <gradient name="Button On">
+      <color-stop rgba="#f1c21bff" start="0"/>
+      <color-stop rgba="#f1c21bff" start="1"/>
+    </gradient>
+  </gradients>
   <control-tags>
-    <control-tag name="AR0" tag="0"/><control-tag name="AR1" tag="1"/>
-    <control-tag name="DR0" tag="2"/><control-tag name="DR1" tag="3"/>
-    <control-tag name="SL0" tag="4"/><control-tag name="SL1" tag="5"/>
-    <control-tag name="RR0" tag="6"/><control-tag name="RR1" tag="7"/>
-    <control-tag name="MUL0" tag="8"/><control-tag name="MUL1" tag="9"/>
-    <control-tag name="FB" tag="10"/><control-tag name="TL" tag="11"/>
-    <control-tag name="DM" tag="12"/><control-tag name="DC" tag="13"/>
-    <control-tag name="AM0" tag="14"/><control-tag name="AM1" tag="15"/>
-    <control-tag name="VIB0" tag="16"/><control-tag name="VIB1" tag="17"/>
-    <control-tag name="Wheel" tag="18"/><control-tag name="Tune" tag="19"/>
-    <control-tag name="EG0" tag="20"/><control-tag name="EG1" tag="21"/>
-    <control-tag name="KSR0" tag="22"/><control-tag name="KSR1" tag="23"/>
-    <control-tag name="KSL0" tag="24"/><control-tag name="KSL1" tag="25"/>
+    <control-tag name="AR0" tag="0"/>
+    <control-tag name="AR1" tag="1"/>
+    <control-tag name="DR0" tag="2"/>
+    <control-tag name="DR1" tag="3"/>
+    <control-tag name="SL0" tag="4"/>
+    <control-tag name="SL1" tag="5"/>
+    <control-tag name="RR0" tag="6"/>
+    <control-tag name="RR1" tag="7"/>
+    <control-tag name="MUL0" tag="8"/>
+    <control-tag name="MUL1" tag="9"/>
+    <control-tag name="FB" tag="10"/>
+    <control-tag name="TL" tag="11"/>
+    <control-tag name="DM" tag="12"/>
+    <control-tag name="DC" tag="13"/>
+    <control-tag name="AM0" tag="14"/>
+    <control-tag name="AM1" tag="15"/>
+    <control-tag name="VIB0" tag="16"/>
+    <control-tag name="VIB1" tag="17"/>
+    <control-tag name="Wheel" tag="18"/>
+    <control-tag name="Tune" tag="19"/>
+    <control-tag name="EG0" tag="20"/>
+    <control-tag name="EG1" tag="21"/>
+    <control-tag name="KSR0" tag="22"/>
+    <control-tag name="KSR1" tag="23"/>
+    <control-tag name="KSL0" tag="24"/>
+    <control-tag name="KSL1" tag="25"/>
   </control-tags>
 
-  <template background-color="Case" background-color-draw-style="filled and stroked" class="CViewContainer" mouse-enabled="true" name="view" origin="0, 0" size="820, 730" transparent="false">
-    <view back-color="Case Edge" class="CTextLabel" font="~ NormalFontVeryBig" font-color="Accent" frame-width="0" mouse-enabled="false" origin="18, 14" size="784, 42" style-no-frame="true" text-alignment="left" text-inset="14, 0" title="VST2413" transparent="false"/>
-    <view back-color="Case Edge" class="CTextLabel" font="~ NormalFontSmaller" font-color="Muted" frame-width="0" mouse-enabled="false" origin="590, 23" size="195, 24" style-no-frame="true" text-alignment="right" title="YM2413 S / MSX MODE" transparent="true"/>
+  <template class="CViewContainer" name="view" background-color="Case" background-color-draw-style="filled and stroked" mouse-enabled="true" origin="0, 0" size="820, 730" transparent="false">
+    <view class="CTextLabel" title="VST2413" back-color="Case Edge" font="~ NormalFontVeryBig" font-color="Accent" frame-width="0" mouse-enabled="false" origin="18, 14" size="784, 42" style-no-frame="true" text-alignment="left" text-inset="14, 0" transparent="false"/>
+    <view class="CTextLabel" title="YM2413 S / MSX MODE" back-color="Case Edge" font="~ NormalFontSmaller" font-color="Muted" frame-width="0" mouse-enabled="false" origin="590, 23" size="195, 24" style-no-frame="true" text-alignment="right" transparent="true"/>
 
     <!-- Operator-independent patch parameters. -->
-    <view background-color="Panel" background-color-draw-style="filled and stroked" class="CViewContainer" frame-color="Panel Light" frame-width="1" origin="18, 68" size="784, 120" transparent="false">
-      <view back-color="Panel" class="CTextLabel" font="~ NormalFontSmall" font-color="Muted" frame-width="0" mouse-enabled="false" origin="15, 8" size="754, 20" style-no-frame="true" text-alignment="left" title="COMMON PATCH PARAMETERS" transparent="true"/>
-      <view back-color="Panel" class="CTextLabel" font="~ NormalFontSmaller" font-color="Ink" frame-width="0" mouse-enabled="false" origin="100, 32" size="110, 18" style-no-frame="true" text-alignment="center" title="TOTAL LEVEL (TL)" transparent="true"/>
-      <view angle-range="270" angle-start="135" circle-drawing="true" class="CKnob" control-tag="TL" corona-color="Accent" corona-drawing="true" corona-inset="6" default-value="0" handle-color="Ink" handle-line-width="3" origin="105, 52" size="50, 50" transparent="false" value-inset="7" wheel-inc-value="0.015873"/>
-      <view back-color="Screen" class="CTextEdit" control-tag="TL" font="~ NormalFontSmaller" font-color="LCD" frame-color="Case Edge" frame-width="1" origin="160, 66" size="60, 22" text-alignment="center" transparent="false"/>
-      <view back-color="Panel" class="CTextLabel" font="~ NormalFontSmaller" font-color="Ink" frame-width="0" mouse-enabled="false" origin="285, 32" size="110, 18" style-no-frame="true" text-alignment="center" title="FEEDBACK (FB)" transparent="true"/>
-      <view angle-range="270" angle-start="135" circle-drawing="true" class="CKnob" control-tag="FB" corona-color="Accent" corona-drawing="true" corona-inset="6" default-value="0" handle-color="Ink" handle-line-width="3" origin="290, 52" size="50, 50" transparent="false" value-inset="7" wheel-inc-value="0.142857"/>
-      <view back-color="Screen" class="CTextEdit" control-tag="FB" font="~ NormalFontSmaller" font-color="LCD" frame-color="Case Edge" frame-width="1" origin="345, 66" size="60, 22" text-alignment="center" transparent="false"/>
-      <view back-color="Screen" class="CTextLabel" font="~ NormalFontSmaller" font-color="LCD" frame-color="Case Edge" frame-width="1" mouse-enabled="false" origin="470, 40" size="280, 62" text-alignment="center" title="TL  0–63&#10;FB  0–7&#10;Shared by the user patch" transparent="false"/>
+    <view class="CViewContainer" background-color="Panel" background-color-draw-style="filled and stroked" frame-color="Panel Light" frame-width="1" origin="18, 68" size="784, 120" transparent="false">
+      <view class="CTextLabel" title="COMMON PATCH PARAMETERS" back-color="Panel" font="~ NormalFontSmall" font-color="Muted" frame-width="0" mouse-enabled="false" origin="15, 8" size="754, 20" style-no-frame="true" text-alignment="left" transparent="true"/>
+      <view class="CTextLabel" title="TOTAL LEVEL (TL)" back-color="Panel" font="~ NormalFontSmaller" font-color="Ink" frame-width="0" mouse-enabled="false" origin="100, 32" size="110, 18" style-no-frame="true" text-alignment="center" transparent="true"/>
+      <view class="CKnob" angle-range="270" angle-start="135" circle-drawing="true" control-tag="TL" tooltip="Total Level" corona-color="Accent" corona-drawing="true" corona-inset="6" default-value="0" handle-color="Ink" handle-line-width="3" origin="105, 52" size="50, 50" transparent="false" value-inset="7" wheel-inc-value="0.015873"/>
+      <view class="CTextEdit" back-color="Screen" control-tag="TL" tooltip="Total Level" font="~ NormalFontSmaller" font-color="LCD" frame-color="Case Edge" frame-width="1" origin="160, 66" size="60, 22" text-alignment="center" transparent="false"/>
+      <view class="CTextLabel" title="FEEDBACK (FB)" back-color="Panel" font="~ NormalFontSmaller" font-color="Ink" frame-width="0" mouse-enabled="false" origin="285, 32" size="110, 18" style-no-frame="true" text-alignment="center" transparent="true"/>
+      <view class="CKnob" angle-range="270" angle-start="135" circle-drawing="true" control-tag="FB" tooltip="Feedback" corona-color="Accent" corona-drawing="true" corona-inset="6" default-value="0" handle-color="Ink" handle-line-width="3" origin="290, 52" size="50, 50" transparent="false" value-inset="7" wheel-inc-value="0.142857"/>
+      <view class="CTextEdit" back-color="Screen" control-tag="FB" tooltip="Feedback" font="~ NormalFontSmaller" font-color="LCD" frame-color="Case Edge" frame-width="1" origin="345, 66" size="60, 22" text-alignment="center" transparent="false"/>
+      <view class="CMultiLineTextLabel" line-layout="truncate" vertical-centered="true" title="TL  0-63&#10;FB  0-7&#10;Shared by the user patch" back-color="Screen" font="~ NormalFontSmaller" font-color="LCD" frame-color="Case Edge" frame-width="1" mouse-enabled="false" origin="470, 40" size="280, 62" text-alignment="center" transparent="false"/>
     </view>
 
     <!-- Main operator controls, in the requested synthesis order. -->
-    <view background-color="Panel" background-color-draw-style="filled and stroked" class="CViewContainer" frame-color="Panel Light" frame-width="1" origin="18, 200" size="784, 250" transparent="false">
-      <view back-color="Panel" class="CTextLabel" font="~ NormalFontSmall" font-color="Muted" frame-width="0" mouse-enabled="false" origin="15, 8" size="754, 20" style-no-frame="true" text-alignment="left" title="OPERATOR — EG → MUL → AR → DR → SL → RR" transparent="true"/>
-      <view back-color="Panel" class="CTextLabel" font="~ NormalFontSmaller" font-color="Ink" frame-width="0" mouse-enabled="false" origin="92, 34" size="80, 18" style-no-frame="true" text-alignment="center" title="EG (0/1)" transparent="true"/>
-      <view back-color="Panel" class="CTextLabel" font="~ NormalFontSmaller" font-color="Ink" frame-width="0" mouse-enabled="false" origin="197, 34" size="80, 18" style-no-frame="true" text-alignment="center" title="MUL" transparent="true"/>
-      <view back-color="Panel" class="CTextLabel" font="~ NormalFontSmaller" font-color="Ink" frame-width="0" mouse-enabled="false" origin="302, 34" size="80, 18" style-no-frame="true" text-alignment="center" title="AR" transparent="true"/>
-      <view back-color="Panel" class="CTextLabel" font="~ NormalFontSmaller" font-color="Ink" frame-width="0" mouse-enabled="false" origin="407, 34" size="80, 18" style-no-frame="true" text-alignment="center" title="DR" transparent="true"/>
-      <view back-color="Panel" class="CTextLabel" font="~ NormalFontSmaller" font-color="Ink" frame-width="0" mouse-enabled="false" origin="512, 34" size="80, 18" style-no-frame="true" text-alignment="center" title="SL" transparent="true"/>
-      <view back-color="Panel" class="CTextLabel" font="~ NormalFontSmaller" font-color="Ink" frame-width="0" mouse-enabled="false" origin="617, 34" size="80, 18" style-no-frame="true" text-alignment="center" title="RR" transparent="true"/>
+    <view class="CViewContainer" background-color="Panel" background-color-draw-style="filled and stroked" frame-color="Panel Light" frame-width="1" origin="18, 200" size="784, 250" transparent="false">
+      <view class="CTextLabel" title="OPERATOR — EG → MUL → AR → DR → SL → RR" back-color="Panel" font="~ NormalFontSmall" font-color="Muted" frame-width="0" mouse-enabled="false" origin="15, 8" size="754, 20" style-no-frame="true" text-alignment="left" transparent="true"/>
+      <view class="CTextLabel" title="EG (0/1)" back-color="Panel" font="~ NormalFontSmaller" font-color="Ink" frame-width="0" mouse-enabled="false" origin="92, 34" size="80, 18" style-no-frame="true" text-alignment="center" transparent="true"/>
+      <view class="CTextLabel" title="MUL" back-color="Panel" font="~ NormalFontSmaller" font-color="Ink" frame-width="0" mouse-enabled="false" origin="197, 34" size="80, 18" style-no-frame="true" text-alignment="center" transparent="true"/>
+      <view class="CTextLabel" title="AR" back-color="Panel" font="~ NormalFontSmaller" font-color="Ink" frame-width="0" mouse-enabled="false" origin="302, 34" size="80, 18" style-no-frame="true" text-alignment="center" transparent="true"/>
+      <view class="CTextLabel" title="DR" back-color="Panel" font="~ NormalFontSmaller" font-color="Ink" frame-width="0" mouse-enabled="false" origin="407, 34" size="80, 18" style-no-frame="true" text-alignment="center" transparent="true"/>
+      <view class="CTextLabel" title="SL" back-color="Panel" font="~ NormalFontSmaller" font-color="Ink" frame-width="0" mouse-enabled="false" origin="512, 34" size="80, 18" style-no-frame="true" text-alignment="center" transparent="true"/>
+      <view class="CTextLabel" title="RR" back-color="Panel" font="~ NormalFontSmaller" font-color="Ink" frame-width="0" mouse-enabled="false" origin="617, 34" size="80, 18" style-no-frame="true" text-alignment="center" transparent="true"/>
 
-      <view back-color="Screen" class="CTextLabel" font="~ NormalFontSmaller" font-color="LCD" frame-color="Case Edge" frame-width="1" mouse-enabled="false" origin="15, 58" size="62, 76" text-alignment="center" title="MODULATOR&#10;(M)" transparent="false"/>
-      <view class="CTextButton" control-tag="EG0" default-value="1" font="~ NormalFontSmall" frame-color="Case Edge" frame-width="1" gradient="Default TextButton Gradient" gradient-highlighted="Default TextButton Gradient Highlighted" kick-style="false" origin="94, 58" round-radius="5" size="76, 50" text-color="Ink" text-color-highlighted="Accent" title="EG M"/>
-      <view back-color="Screen" class="CTextEdit" control-tag="EG0" font="~ NormalFontSmaller" font-color="LCD" frame-color="Case Edge" frame-width="1" origin="102, 111" size="60, 22" text-alignment="center" transparent="false"/>
-      <view angle-range="270" angle-start="135" circle-drawing="true" class="CKnob" control-tag="MUL0" corona-color="Accent" corona-drawing="true" corona-inset="6" default-value="0.0666667" handle-color="Ink" handle-line-width="3" origin="212, 58" size="50, 50" transparent="false" value-inset="7" wheel-inc-value="0.0666667"/>
-      <view back-color="Screen" class="CTextEdit" control-tag="MUL0" font="~ NormalFontSmaller" font-color="LCD" frame-color="Case Edge" frame-width="1" origin="207, 111" size="60, 22" text-alignment="center" transparent="false"/>
-      <view angle-range="270" angle-start="135" circle-drawing="true" class="CKnob" control-tag="AR0" corona-color="Accent" corona-drawing="true" corona-inset="6" default-value="0" handle-color="Ink" handle-line-width="3" origin="317, 58" size="50, 50" transparent="false" value-inset="7" wheel-inc-value="0.0666667"/>
-      <view back-color="Screen" class="CTextEdit" control-tag="AR0" font="~ NormalFontSmaller" font-color="LCD" frame-color="Case Edge" frame-width="1" origin="312, 111" size="60, 22" text-alignment="center" transparent="false"/>
-      <view angle-range="270" angle-start="135" circle-drawing="true" class="CKnob" control-tag="DR0" corona-color="Accent" corona-drawing="true" corona-inset="6" default-value="0" handle-color="Ink" handle-line-width="3" origin="422, 58" size="50, 50" transparent="false" value-inset="7" wheel-inc-value="0.0666667"/>
-      <view back-color="Screen" class="CTextEdit" control-tag="DR0" font="~ NormalFontSmaller" font-color="LCD" frame-color="Case Edge" frame-width="1" origin="417, 111" size="60, 22" text-alignment="center" transparent="false"/>
-      <view angle-range="270" angle-start="135" circle-drawing="true" class="CKnob" control-tag="SL0" corona-color="Accent" corona-drawing="true" corona-inset="6" default-value="1" handle-color="Ink" handle-line-width="3" origin="527, 58" size="50, 50" transparent="false" value-inset="7" wheel-inc-value="0.0666667"/>
-      <view back-color="Screen" class="CTextEdit" control-tag="SL0" font="~ NormalFontSmaller" font-color="LCD" frame-color="Case Edge" frame-width="1" origin="522, 111" size="60, 22" text-alignment="center" transparent="false"/>
-      <view angle-range="270" angle-start="135" circle-drawing="true" class="CKnob" control-tag="RR0" corona-color="Accent" corona-drawing="true" corona-inset="6" default-value="0" handle-color="Ink" handle-line-width="3" origin="632, 58" size="50, 50" transparent="false" value-inset="7" wheel-inc-value="0.0666667"/>
-      <view back-color="Screen" class="CTextEdit" control-tag="RR0" font="~ NormalFontSmaller" font-color="LCD" frame-color="Case Edge" frame-width="1" origin="627, 111" size="60, 22" text-alignment="center" transparent="false"/>
+      <view class="CMultiLineTextLabel" line-layout="truncate" vertical-centered="true" title="MODULATOR&#10;(M)" back-color="Screen" font="~ NormalFontSmaller" font-color="LCD" frame-color="Case Edge" frame-width="1" mouse-enabled="false" origin="10, 58" size="78, 76" text-alignment="center" transparent="false"/>
+      <view class="CTextButton" title="EG M" control-tag="EG0" tooltip="Envelope Generator Type" default-value="1" font="~ NormalFontSmall" frame-color="Panel Light" frame-width="1" gradient="Button" gradient-highlighted="Button On" kick-style="false" origin="94, 58" round-radius="5" size="76, 50" text-color="Ink" text-color-highlighted="Ink Inverse"/>
+      <view class="CTextEdit" back-color="Screen" control-tag="EG0" tooltip="Envelope Generator Type" font="~ NormalFontSmaller" font-color="LCD" frame-color="Case Edge" frame-width="1" origin="102, 111" size="60, 22" text-alignment="center" transparent="false"/>
+      <view class="CKnob" angle-range="270" angle-start="135" circle-drawing="true" control-tag="MUL0" tooltip="Multiple" corona-color="Accent" corona-drawing="true" corona-inset="6" default-value="0.0666667" handle-color="Ink" handle-line-width="3" origin="212, 58" size="50, 50" transparent="false" value-inset="7" wheel-inc-value="0.0666667"/>
+      <view class="CTextEdit" back-color="Screen" control-tag="MUL0" tooltip="Multiple" font="~ NormalFontSmaller" font-color="LCD" frame-color="Case Edge" frame-width="1" origin="207, 111" size="60, 22" text-alignment="center" transparent="false"/>
+      <view class="CKnob" angle-range="270" angle-start="135" circle-drawing="true" control-tag="AR0" tooltip="Attack Rate" corona-color="Accent" corona-drawing="true" corona-inset="6" default-value="0" handle-color="Ink" handle-line-width="3" origin="317, 58" size="50, 50" transparent="false" value-inset="7" wheel-inc-value="0.0666667"/>
+      <view class="CTextEdit" back-color="Screen" control-tag="AR0" tooltip="Attack Rate" font="~ NormalFontSmaller" font-color="LCD" frame-color="Case Edge" frame-width="1" origin="312, 111" size="60, 22" text-alignment="center" transparent="false"/>
+      <view class="CKnob" angle-range="270" angle-start="135" circle-drawing="true" control-tag="DR0" tooltip="Decay Rate" corona-color="Accent" corona-drawing="true" corona-inset="6" default-value="0" handle-color="Ink" handle-line-width="3" origin="422, 58" size="50, 50" transparent="false" value-inset="7" wheel-inc-value="0.0666667"/>
+      <view class="CTextEdit" back-color="Screen" control-tag="DR0" tooltip="Decay Rate" font="~ NormalFontSmaller" font-color="LCD" frame-color="Case Edge" frame-width="1" origin="417, 111" size="60, 22" text-alignment="center" transparent="false"/>
+      <view class="CKnob" angle-range="270" angle-start="135" circle-drawing="true" control-tag="SL0" tooltip="Sustain Level" corona-color="Accent" corona-drawing="true" corona-inset="6" default-value="1" handle-color="Ink" handle-line-width="3" origin="527, 58" size="50, 50" transparent="false" value-inset="7" wheel-inc-value="0.0666667"/>
+      <view class="CTextEdit" back-color="Screen" control-tag="SL0" tooltip="Sustain Level" font="~ NormalFontSmaller" font-color="LCD" frame-color="Case Edge" frame-width="1" origin="522, 111" size="60, 22" text-alignment="center" transparent="false"/>
+      <view class="CKnob" angle-range="270" angle-start="135" circle-drawing="true" control-tag="RR0" tooltip="Release Rate" corona-color="Accent" corona-drawing="true" corona-inset="6" default-value="0" handle-color="Ink" handle-line-width="3" origin="632, 58" size="50, 50" transparent="false" value-inset="7" wheel-inc-value="0.0666667"/>
+      <view class="CTextEdit" back-color="Screen" control-tag="RR0" tooltip="Release Rate" font="~ NormalFontSmaller" font-color="LCD" frame-color="Case Edge" frame-width="1" origin="627, 111" size="60, 22" text-alignment="center" transparent="false"/>
 
-      <view back-color="Screen" class="CTextLabel" font="~ NormalFontSmaller" font-color="LCD" frame-color="Case Edge" frame-width="1" mouse-enabled="false" origin="15, 150" size="62, 76" text-alignment="center" title="CARRIER&#10;(C)" transparent="false"/>
-      <view class="CTextButton" control-tag="EG1" default-value="1" font="~ NormalFontSmall" frame-color="Case Edge" frame-width="1" gradient="Default TextButton Gradient" gradient-highlighted="Default TextButton Gradient Highlighted" kick-style="false" origin="94, 150" round-radius="5" size="76, 50" text-color="Ink" text-color-highlighted="Accent" title="EG C"/>
-      <view back-color="Screen" class="CTextEdit" control-tag="EG1" font="~ NormalFontSmaller" font-color="LCD" frame-color="Case Edge" frame-width="1" origin="102, 203" size="60, 22" text-alignment="center" transparent="false"/>
-      <view angle-range="270" angle-start="135" circle-drawing="true" class="CKnob" control-tag="MUL1" corona-color="LCD" corona-drawing="true" corona-inset="6" default-value="0.0666667" handle-color="Ink" handle-line-width="3" origin="212, 150" size="50, 50" transparent="false" value-inset="7" wheel-inc-value="0.0666667"/>
-      <view back-color="Screen" class="CTextEdit" control-tag="MUL1" font="~ NormalFontSmaller" font-color="LCD" frame-color="Case Edge" frame-width="1" origin="207, 203" size="60, 22" text-alignment="center" transparent="false"/>
-      <view angle-range="270" angle-start="135" circle-drawing="true" class="CKnob" control-tag="AR1" corona-color="LCD" corona-drawing="true" corona-inset="6" default-value="0" handle-color="Ink" handle-line-width="3" origin="317, 150" size="50, 50" transparent="false" value-inset="7" wheel-inc-value="0.0666667"/>
-      <view back-color="Screen" class="CTextEdit" control-tag="AR1" font="~ NormalFontSmaller" font-color="LCD" frame-color="Case Edge" frame-width="1" origin="312, 203" size="60, 22" text-alignment="center" transparent="false"/>
-      <view angle-range="270" angle-start="135" circle-drawing="true" class="CKnob" control-tag="DR1" corona-color="LCD" corona-drawing="true" corona-inset="6" default-value="0" handle-color="Ink" handle-line-width="3" origin="422, 150" size="50, 50" transparent="false" value-inset="7" wheel-inc-value="0.0666667"/>
-      <view back-color="Screen" class="CTextEdit" control-tag="DR1" font="~ NormalFontSmaller" font-color="LCD" frame-color="Case Edge" frame-width="1" origin="417, 203" size="60, 22" text-alignment="center" transparent="false"/>
-      <view angle-range="270" angle-start="135" circle-drawing="true" class="CKnob" control-tag="SL1" corona-color="LCD" corona-drawing="true" corona-inset="6" default-value="1" handle-color="Ink" handle-line-width="3" origin="527, 150" size="50, 50" transparent="false" value-inset="7" wheel-inc-value="0.0666667"/>
-      <view back-color="Screen" class="CTextEdit" control-tag="SL1" font="~ NormalFontSmaller" font-color="LCD" frame-color="Case Edge" frame-width="1" origin="522, 203" size="60, 22" text-alignment="center" transparent="false"/>
-      <view angle-range="270" angle-start="135" circle-drawing="true" class="CKnob" control-tag="RR1" corona-color="LCD" corona-drawing="true" corona-inset="6" default-value="0" handle-color="Ink" handle-line-width="3" origin="632, 150" size="50, 50" transparent="false" value-inset="7" wheel-inc-value="0.0666667"/>
-      <view back-color="Screen" class="CTextEdit" control-tag="RR1" font="~ NormalFontSmaller" font-color="LCD" frame-color="Case Edge" frame-width="1" origin="627, 203" size="60, 22" text-alignment="center" transparent="false"/>
+      <view class="CMultiLineTextLabel" line-layout="truncate" vertical-centered="true" title="CARRIER&#10;(C)" back-color="Screen" font="~ NormalFontSmaller" font-color="LCD" frame-color="Case Edge" frame-width="1" mouse-enabled="false" origin="10, 150" size="78, 76" text-alignment="center" transparent="false"/>
+      <view class="CTextButton" title="EG C" control-tag="EG1" tooltip="Envelope Generator Type" default-value="1" font="~ NormalFontSmall" frame-color="Panel Light" frame-width="1" gradient="Button" gradient-highlighted="Button On" kick-style="false" origin="94, 150" round-radius="5" size="76, 50" text-color="Ink" text-color-highlighted="Ink Inverse"/>
+      <view class="CTextEdit" back-color="Screen" control-tag="EG1" tooltip="Envelope Generator Type" font="~ NormalFontSmaller" font-color="LCD" frame-color="Case Edge" frame-width="1" origin="102, 203" size="60, 22" text-alignment="center" transparent="false"/>
+      <view class="CKnob" angle-range="270" angle-start="135" circle-drawing="true" control-tag="MUL1" tooltip="Multiple" corona-color="LCD" corona-drawing="true" corona-inset="6" default-value="0.0666667" handle-color="Ink" handle-line-width="3" origin="212, 150" size="50, 50" transparent="false" value-inset="7" wheel-inc-value="0.0666667"/>
+      <view class="CTextEdit" back-color="Screen" control-tag="MUL1" tooltip="Multiple" font="~ NormalFontSmaller" font-color="LCD" frame-color="Case Edge" frame-width="1" origin="207, 203" size="60, 22" text-alignment="center" transparent="false"/>
+      <view class="CKnob" angle-range="270" angle-start="135" circle-drawing="true" control-tag="AR1" tooltip="Attack Rate" corona-color="LCD" corona-drawing="true" corona-inset="6" default-value="0" handle-color="Ink" handle-line-width="3" origin="317, 150" size="50, 50" transparent="false" value-inset="7" wheel-inc-value="0.0666667"/>
+      <view class="CTextEdit" back-color="Screen" control-tag="AR1" tooltip="Attack Rate" font="~ NormalFontSmaller" font-color="LCD" frame-color="Case Edge" frame-width="1" origin="312, 203" size="60, 22" text-alignment="center" transparent="false"/>
+      <view class="CKnob" angle-range="270" angle-start="135" circle-drawing="true" control-tag="DR1" tooltip="Decay Rate" corona-color="LCD" corona-drawing="true" corona-inset="6" default-value="0" handle-color="Ink" handle-line-width="3" origin="422, 150" size="50, 50" transparent="false" value-inset="7" wheel-inc-value="0.0666667"/>
+      <view class="CTextEdit" back-color="Screen" control-tag="DR1" tooltip="Decay Rate" font="~ NormalFontSmaller" font-color="LCD" frame-color="Case Edge" frame-width="1" origin="417, 203" size="60, 22" text-alignment="center" transparent="false"/>
+      <view class="CKnob" angle-range="270" angle-start="135" circle-drawing="true" control-tag="SL1" tooltip="Sustain Level" corona-color="LCD" corona-drawing="true" corona-inset="6" default-value="1" handle-color="Ink" handle-line-width="3" origin="527, 150" size="50, 50" transparent="false" value-inset="7" wheel-inc-value="0.0666667"/>
+      <view class="CTextEdit" back-color="Screen" control-tag="SL1" tooltip="Sustain Level" font="~ NormalFontSmaller" font-color="LCD" frame-color="Case Edge" frame-width="1" origin="522, 203" size="60, 22" text-alignment="center" transparent="false"/>
+      <view class="CKnob" angle-range="270" angle-start="135" circle-drawing="true" control-tag="RR1" tooltip="Release Rate" corona-color="LCD" corona-drawing="true" corona-inset="6" default-value="0" handle-color="Ink" handle-line-width="3" origin="632, 150" size="50, 50" transparent="false" value-inset="7" wheel-inc-value="0.0666667"/>
+      <view class="CTextEdit" back-color="Screen" control-tag="RR1" tooltip="Release Rate" font="~ NormalFontSmaller" font-color="LCD" frame-color="Case Edge" frame-width="1" origin="627, 203" size="60, 22" text-alignment="center" transparent="false"/>
     </view>
 
     <!-- Secondary operator controls. -->
-    <view background-color="Panel" background-color-draw-style="filled and stroked" class="CViewContainer" frame-color="Panel Light" frame-width="1" origin="18, 462" size="784, 170" transparent="false">
-      <view back-color="Panel" class="CTextLabel" font="~ NormalFontSmall" font-color="Muted" frame-width="0" mouse-enabled="false" origin="15, 8" size="754, 20" style-no-frame="true" text-alignment="left" title="OPERATOR DETAIL — KSR → KSL → AM → VIB → DISTORTION" transparent="true"/>
-      <view back-color="Panel" class="CTextLabel" font="~ NormalFontSmaller" font-color="Ink" frame-width="0" mouse-enabled="false" origin="100, 34" size="90, 18" style-no-frame="true" text-alignment="center" title="KSR" transparent="true"/>
-      <view back-color="Panel" class="CTextLabel" font="~ NormalFontSmaller" font-color="Ink" frame-width="0" mouse-enabled="false" origin="220, 34" size="90, 18" style-no-frame="true" text-alignment="center" title="KSL" transparent="true"/>
-      <view back-color="Panel" class="CTextLabel" font="~ NormalFontSmaller" font-color="Ink" frame-width="0" mouse-enabled="false" origin="355, 34" size="90, 18" style-no-frame="true" text-alignment="center" title="AM / TREMOLO" transparent="true"/>
-      <view back-color="Panel" class="CTextLabel" font="~ NormalFontSmaller" font-color="Ink" frame-width="0" mouse-enabled="false" origin="475, 34" size="90, 18" style-no-frame="true" text-alignment="center" title="VIBRATO" transparent="true"/>
-      <view back-color="Panel" class="CTextLabel" font="~ NormalFontSmaller" font-color="Ink" frame-width="0" mouse-enabled="false" origin="595, 34" size="130, 18" style-no-frame="true" text-alignment="center" title="DISTORTION" transparent="true"/>
-      <view back-color="Screen" class="CTextLabel" font="~ NormalFontSmaller" font-color="LCD" frame-color="Case Edge" frame-width="1" mouse-enabled="false" origin="15, 58" size="62, 38" text-alignment="center" title="M" transparent="false"/>
-      <view back-color="Screen" class="CTextLabel" font="~ NormalFontSmaller" font-color="LCD" frame-color="Case Edge" frame-width="1" mouse-enabled="false" origin="15, 108" size="62, 38" text-alignment="center" title="C" transparent="false"/>
-      <view class="CTextButton" control-tag="KSR0" default-value="0" font="~ NormalFontSmall" frame-color="Case Edge" frame-width="1" gradient="Default TextButton Gradient" gradient-highlighted="Default TextButton Gradient Highlighted" kick-style="false" origin="100, 58" round-radius="5" size="90, 38" text-color="Ink" text-color-highlighted="Accent" title="KSR M"/>
-      <view class="CTextButton" control-tag="KSR1" default-value="0" font="~ NormalFontSmall" frame-color="Case Edge" frame-width="1" gradient="Default TextButton Gradient" gradient-highlighted="Default TextButton Gradient Highlighted" kick-style="false" origin="100, 108" round-radius="5" size="90, 38" text-color="Ink" text-color-highlighted="Accent" title="KSR C"/>
-      <view angle-range="270" angle-start="135" circle-drawing="true" class="CKnob" control-tag="KSL0" corona-color="Accent" corona-drawing="true" corona-inset="5" default-value="0" handle-color="Ink" handle-line-width="3" origin="220, 56" size="42, 42" transparent="false" value-inset="6" wheel-inc-value="0.333333"/>
-      <view back-color="Screen" class="CTextEdit" control-tag="KSL0" font="~ NormalFontSmaller" font-color="LCD" frame-color="Case Edge" frame-width="1" origin="270, 66" size="46, 22" text-alignment="center" transparent="false"/>
-      <view angle-range="270" angle-start="135" circle-drawing="true" class="CKnob" control-tag="KSL1" corona-color="LCD" corona-drawing="true" corona-inset="5" default-value="0" handle-color="Ink" handle-line-width="3" origin="220, 106" size="42, 42" transparent="false" value-inset="6" wheel-inc-value="0.333333"/>
-      <view back-color="Screen" class="CTextEdit" control-tag="KSL1" font="~ NormalFontSmaller" font-color="LCD" frame-color="Case Edge" frame-width="1" origin="270, 116" size="46, 22" text-alignment="center" transparent="false"/>
-      <view class="CTextButton" control-tag="AM0" default-value="0" font="~ NormalFontSmall" frame-color="Case Edge" frame-width="1" gradient="Default TextButton Gradient" gradient-highlighted="Default TextButton Gradient Highlighted" kick-style="false" origin="355, 58" round-radius="5" size="90, 38" text-color="Ink" text-color-highlighted="Accent" title="AM M"/>
-      <view class="CTextButton" control-tag="AM1" default-value="0" font="~ NormalFontSmall" frame-color="Case Edge" frame-width="1" gradient="Default TextButton Gradient" gradient-highlighted="Default TextButton Gradient Highlighted" kick-style="false" origin="355, 108" round-radius="5" size="90, 38" text-color="Ink" text-color-highlighted="Accent" title="AM C"/>
-      <view class="CTextButton" control-tag="VIB0" default-value="0" font="~ NormalFontSmall" frame-color="Case Edge" frame-width="1" gradient="Default TextButton Gradient" gradient-highlighted="Default TextButton Gradient Highlighted" kick-style="false" origin="475, 58" round-radius="5" size="90, 38" text-color="Ink" text-color-highlighted="Accent" title="VIB M"/>
-      <view class="CTextButton" control-tag="VIB1" default-value="0" font="~ NormalFontSmall" frame-color="Case Edge" frame-width="1" gradient="Default TextButton Gradient" gradient-highlighted="Default TextButton Gradient Highlighted" kick-style="false" origin="475, 108" round-radius="5" size="90, 38" text-color="Ink" text-color-highlighted="Accent" title="VIB C"/>
-      <view class="CTextButton" control-tag="DM" default-value="0" font="~ NormalFontSmall" frame-color="Case Edge" frame-width="1" gradient="Default TextButton Gradient" gradient-highlighted="Default TextButton Gradient Highlighted" kick-style="false" origin="595, 58" round-radius="5" size="130, 38" text-color="Ink" text-color-highlighted="Accent" title="DISTORTION M"/>
-      <view class="CTextButton" control-tag="DC" default-value="0" font="~ NormalFontSmall" frame-color="Case Edge" frame-width="1" gradient="Default TextButton Gradient" gradient-highlighted="Default TextButton Gradient Highlighted" kick-style="false" origin="595, 108" round-radius="5" size="130, 38" text-color="Ink" text-color-highlighted="Accent" title="DISTORTION C"/>
+    <view class="CViewContainer" background-color="Panel" background-color-draw-style="filled and stroked" frame-color="Panel Light" frame-width="1" origin="18, 462" size="784, 170" transparent="false">
+      <view class="CTextLabel" title="OPERATOR DETAIL — KSR → KSL → AM → VIB → DISTORTION" back-color="Panel" font="~ NormalFontSmall" font-color="Muted" frame-width="0" mouse-enabled="false" origin="15, 8" size="754, 20" style-no-frame="true" text-alignment="left" transparent="true"/>
+      <view class="CTextLabel" title="KSR" back-color="Panel" font="~ NormalFontSmaller" font-color="Ink" frame-width="0" mouse-enabled="false" origin="100, 34" size="90, 18" style-no-frame="true" text-alignment="center" transparent="true"/>
+      <view class="CTextLabel" title="KSL" back-color="Panel" font="~ NormalFontSmaller" font-color="Ink" frame-width="0" mouse-enabled="false" origin="220, 34" size="90, 18" style-no-frame="true" text-alignment="center" transparent="true"/>
+      <view class="CTextLabel" title="AM / TREMOLO" back-color="Panel" font="~ NormalFontSmaller" font-color="Ink" frame-width="0" mouse-enabled="false" origin="355, 34" size="90, 18" style-no-frame="true" text-alignment="center" transparent="true"/>
+      <view class="CTextLabel" title="VIBRATO" back-color="Panel" font="~ NormalFontSmaller" font-color="Ink" frame-width="0" mouse-enabled="false" origin="475, 34" size="90, 18" style-no-frame="true" text-alignment="center" transparent="true"/>
+      <view class="CTextLabel" title="DISTORTION" back-color="Panel" font="~ NormalFontSmaller" font-color="Ink" frame-width="0" mouse-enabled="false" origin="595, 34" size="130, 18" style-no-frame="true" text-alignment="center" transparent="true"/>
+      <view class="CTextLabel" title="M" back-color="Screen" font="~ NormalFontSmaller" font-color="LCD" frame-color="Case Edge" frame-width="1" mouse-enabled="false" origin="15, 58" size="62, 38" text-alignment="center" transparent="false"/>
+      <view class="CTextLabel" title="C" back-color="Screen" font="~ NormalFontSmaller" font-color="LCD" frame-color="Case Edge" frame-width="1" mouse-enabled="false" origin="15, 108" size="62, 38" text-alignment="center" transparent="false"/>
+      <view class="CTextButton" title="KSR M" control-tag="KSR0" tooltip="Key Scale Rate" default-value="0" font="~ NormalFontSmall" frame-color="Panel Light" frame-width="1" gradient="Button" gradient-highlighted="Button On" kick-style="false" origin="100, 58" round-radius="5" size="90, 38" text-color="Ink" text-color-highlighted="Ink Inverse"/>
+      <view class="CTextButton" title="KSR C" control-tag="KSR1" tooltip="Key Scale Rate" default-value="0" font="~ NormalFontSmall" frame-color="Panel Light" frame-width="1" gradient="Button" gradient-highlighted="Button On" kick-style="false" origin="100, 108" round-radius="5" size="90, 38" text-color="Ink" text-color-highlighted="Ink Inverse"/>
+      <view class="CKnob" angle-range="270" angle-start="135" circle-drawing="true" control-tag="KSL0" tooltip="Key Scale Level" corona-color="Accent" corona-drawing="true" corona-inset="5" default-value="0" handle-color="Ink" handle-line-width="3" origin="220, 56" size="42, 42" transparent="false" value-inset="6" wheel-inc-value="0.333333"/>
+      <view class="CTextEdit" back-color="Screen" control-tag="KSL0" tooltip="Key Scale Level" font="~ NormalFontSmaller" font-color="LCD" frame-color="Case Edge" frame-width="1" origin="270, 66" size="46, 22" text-alignment="center" transparent="false"/>
+      <view class="CKnob" angle-range="270" angle-start="135" circle-drawing="true" control-tag="KSL1" tooltip="Key Scale Level" corona-color="LCD" corona-drawing="true" corona-inset="5" default-value="0" handle-color="Ink" handle-line-width="3" origin="220, 106" size="42, 42" transparent="false" value-inset="6" wheel-inc-value="0.333333"/>
+      <view class="CTextEdit" back-color="Screen" control-tag="KSL1" tooltip="Key Scale Level" font="~ NormalFontSmaller" font-color="LCD" frame-color="Case Edge" frame-width="1" origin="270, 116" size="46, 22" text-alignment="center" transparent="false"/>
+      <view class="CTextButton" title="AM M" control-tag="AM0" tooltip="Amplitude Modulation" default-value="0" font="~ NormalFontSmall" frame-color="Panel Light" frame-width="1" gradient="Button" gradient-highlighted="Button On" kick-style="false" origin="355, 58" round-radius="5" size="90, 38" text-color="Ink" text-color-highlighted="Ink Inverse"/>
+      <view class="CTextButton" title="AM C" control-tag="AM1" tooltip="Amplitude Modulation" default-value="0" font="~ NormalFontSmall" frame-color="Panel Light" frame-width="1" gradient="Button" gradient-highlighted="Button On" kick-style="false" origin="355, 108" round-radius="5" size="90, 38" text-color="Ink" text-color-highlighted="Ink Inverse"/>
+      <view class="CTextButton" title="VIB M" control-tag="VIB0" tooltip="Vibrato" default-value="0" font="~ NormalFontSmall" frame-color="Panel Light" frame-width="1" gradient="Button" gradient-highlighted="Button On" kick-style="false" origin="475, 58" round-radius="5" size="90, 38" text-color="Ink" text-color-highlighted="Ink Inverse"/>
+      <view class="CTextButton" title="VIB C" control-tag="VIB1" tooltip="Vibrato" default-value="0" font="~ NormalFontSmall" frame-color="Panel Light" frame-width="1" gradient="Button" gradient-highlighted="Button On" kick-style="false" origin="475, 108" round-radius="5" size="90, 38" text-color="Ink" text-color-highlighted="Ink Inverse"/>
+      <view class="CTextButton" title="DISTORTION M" control-tag="DM" default-value="0" font="~ NormalFontSmall" frame-color="Panel Light" frame-width="1" gradient="Button" gradient-highlighted="Button On" kick-style="false" origin="595, 58" round-radius="5" size="130, 38" text-color="Ink" text-color-highlighted="Ink Inverse"/>
+      <view class="CTextButton" title="DISTORTION C" control-tag="DC" default-value="0" font="~ NormalFontSmall" frame-color="Panel Light" frame-width="1" gradient="Button" gradient-highlighted="Button On" kick-style="false" origin="595, 108" round-radius="5" size="130, 38" text-color="Ink" text-color-highlighted="Ink Inverse"/>
     </view>
 
     <!-- Non-patch performance controls. -->
-    <view background-color="Panel" background-color-draw-style="filled and stroked" class="CViewContainer" frame-color="Panel Light" frame-width="1" origin="18, 644" size="784, 68" transparent="false">
-      <view back-color="Panel" class="CTextLabel" font="~ NormalFontSmall" font-color="Muted" frame-width="0" mouse-enabled="false" origin="15, 8" size="110, 20" style-no-frame="true" text-alignment="left" title="OTHER" transparent="true"/>
-      <view back-color="Panel" class="CTextLabel" font="~ NormalFontSmaller" font-color="Ink" frame-width="0" mouse-enabled="false" origin="145, 12" size="120, 18" style-no-frame="true" text-alignment="right" title="PITCH WHEEL" transparent="true"/>
-      <view angle-range="270" angle-start="135" circle-drawing="true" class="CKnob" control-tag="Wheel" corona-color="LCD" corona-drawing="true" corona-inset="5" default-value="0.25" handle-color="Ink" handle-line-width="3" origin="280, 8" size="42, 42" transparent="false" value-inset="6"/>
-      <view back-color="Screen" class="CTextEdit" control-tag="Wheel" font="~ NormalFontSmaller" font-color="LCD" frame-color="Case Edge" frame-width="1" origin="332, 18" size="60, 22" text-alignment="center" transparent="false"/>
-      <view back-color="Panel" class="CTextLabel" font="~ NormalFontSmaller" font-color="Ink" frame-width="0" mouse-enabled="false" origin="435, 12" size="90, 18" style-no-frame="true" text-alignment="right" title="FINE TUNE" transparent="true"/>
-      <view angle-range="270" angle-start="135" circle-drawing="true" class="CKnob" control-tag="Tune" corona-color="LCD" corona-drawing="true" corona-inset="5" default-value="0.5" handle-color="Ink" handle-line-width="3" origin="540, 8" size="42, 42" transparent="false" value-inset="6"/>
-      <view back-color="Screen" class="CTextEdit" control-tag="Tune" font="~ NormalFontSmaller" font-color="LCD" frame-color="Case Edge" frame-width="1" origin="592, 18" size="60, 22" text-alignment="center" transparent="false"/>
-      <view back-color="Panel" class="CTextLabel" font="~ NormalFontSmaller" font-color="Muted" frame-width="0" mouse-enabled="false" origin="676, 13" size="90, 26" style-no-frame="true" text-alignment="center" title="PERFORMANCE" transparent="true"/>
+    <view class="CViewContainer" background-color="Panel" background-color-draw-style="filled and stroked" frame-color="Panel Light" frame-width="1" origin="18, 644" size="784, 68" transparent="false">
+      <view class="CTextLabel" title="OTHER" back-color="Panel" font="~ NormalFontSmall" font-color="Muted" frame-width="0" mouse-enabled="false" origin="15, 8" size="110, 20" style-no-frame="true" text-alignment="left" transparent="true"/>
+      <view class="CTextLabel" title="PITCH WHEEL" back-color="Panel" font="~ NormalFontSmaller" font-color="Ink" frame-width="0" mouse-enabled="false" origin="145, 12" size="120, 18" style-no-frame="true" text-alignment="right" transparent="true"/>
+      <view class="CKnob" angle-range="270" angle-start="135" circle-drawing="true" control-tag="Wheel" corona-color="LCD" corona-drawing="true" corona-inset="5" default-value="0.25" handle-color="Ink" handle-line-width="3" origin="280, 8" size="42, 42" transparent="false" value-inset="6"/>
+      <view class="CTextEdit" back-color="Screen" control-tag="Wheel" font="~ NormalFontSmaller" font-color="LCD" frame-color="Case Edge" frame-width="1" origin="332, 18" size="60, 22" text-alignment="center" transparent="false"/>
+      <view class="CTextLabel" title="FINE TUNE" back-color="Panel" font="~ NormalFontSmaller" font-color="Ink" frame-width="0" mouse-enabled="false" origin="435, 12" size="90, 18" style-no-frame="true" text-alignment="right" transparent="true"/>
+      <view class="CKnob" angle-range="270" angle-start="135" circle-drawing="true" control-tag="Tune" corona-color="LCD" corona-drawing="true" corona-inset="5" default-value="0.5" handle-color="Ink" handle-line-width="3" origin="540, 8" size="42, 42" transparent="false" value-inset="6"/>
+      <view class="CTextEdit" back-color="Screen" control-tag="Tune" font="~ NormalFontSmaller" font-color="LCD" frame-color="Case Edge" frame-width="1" origin="592, 18" size="60, 22" text-alignment="center" transparent="false"/>
+      <view class="CTextLabel" title="PERFORMANCE" back-color="Panel" font="~ NormalFontSmaller" font-color="Muted" frame-width="0" mouse-enabled="false" origin="676, 13" size="90, 26" style-no-frame="true" text-alignment="center" transparent="true"/>
     </view>
   </template>
 </vstgui-ui-description>

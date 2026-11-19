@@ -2,31 +2,35 @@
 set -euo pipefail
 
 project_root="$(cd "$(dirname "$0")/.." && pwd)"
-sdk_root="${VST3_SDK_ROOT:-$project_root/third_party/vst3sdk}"
 build_dir="${BUILD_DIR:-$project_root/build}"
 configuration="${CONFIGURATION:-Release}"
 
-if ! command -v cmake >/dev/null; then
-  echo "CMake 3.25 or newer is required." >&2
-  exit 1
-fi
+command -v cmake >/dev/null || { echo "CMake 3.25 or newer is required." >&2; exit 1; }
 
-if [[ ! -f "$sdk_root/CMakeLists.txt" ]]; then
-  if [[ "${BOOTSTRAP_SDK:-0}" != "1" ]]; then
-    echo "VST3 SDK was not found at '$sdk_root'. Set BOOTSTRAP_SDK=1 or VST3_SDK_ROOT." >&2
+if [[ -z "${VCPKG_ROOT:-}" ]]; then
+  if [[ -f "$HOME/vcpkg/scripts/buildsystems/vcpkg.cmake" ]]; then
+    export VCPKG_ROOT="$HOME/vcpkg"
+  else
+    echo "VCPKG_ROOT is not set. Install vcpkg and export VCPKG_ROOT." >&2
     exit 1
   fi
-  command -v git >/dev/null || { echo "Git is required to fetch the VST3 SDK." >&2; exit 1; }
-  mkdir -p "$(dirname "$sdk_root")"
-  git clone --recursive https://github.com/steinbergmedia/vst3sdk.git "$sdk_root"
-  git -C "$sdk_root" checkout 3cdf9ca4e1044ddc036393c50a3930cffcd8c694
-  git -C "$sdk_root" submodule update --init --recursive
+fi
+
+# The VST3 SDK probes the Xcode version via xcodebuild, which only exists with
+# a full Xcode install. With Command Line Tools only, provide a version so the
+# SDK's check passes (the actual build uses the CLT clang toolchain).
+extra_args=()
+if ! xcodebuild -version >/dev/null 2>&1; then
+  export XCODE_VERSION="${XCODE_VERSION:-16.0}"
+  extra_args+=("-DXCODE_VERSION=$XCODE_VERSION")
+  echo "Xcode not found; building with Command Line Tools (XCODE_VERSION=$XCODE_VERSION)."
 fi
 
 cmake -S "$project_root" -B "$build_dir" \
+  -DCMAKE_TOOLCHAIN_FILE="$VCPKG_ROOT/scripts/buildsystems/vcpkg.cmake" \
   -DCMAKE_BUILD_TYPE="$configuration" \
   -DCMAKE_OSX_ARCHITECTURES="arm64;x86_64" \
-  -DVST3_SDK_ROOT="$sdk_root"
+  ${extra_args[@]+"${extra_args[@]}"}
 cmake --build "$build_dir" --config "$configuration" --target vst2413p vst2413r vst2413s
 
 echo "Built bundles: $build_dir/VST3/$configuration"

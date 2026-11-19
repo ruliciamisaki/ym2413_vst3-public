@@ -7,7 +7,7 @@
 ### Windows（検証済み）
 
 1. `VST2413-*-windows-x86_64.zip` を展開します。
-2. `vst2413p.vst3`、`vst2413r.vst3`、`vst2413s.vst3` を、**フォルダーのまま**次のいずれかへコピーします。
+2. `VST2413P.vst3`、`VST2413R.vst3`、`VST2413S.vst3` を、**フォルダーのまま**次のいずれかへコピーします。
    - 全ユーザー: `C:\Program Files\Common Files\VST3\`
    - 現在のユーザーのみ: `%LOCALAPPDATA%\Programs\Common\VST3\`
 3. Cubase Pro 13 の **Studio > VST Plug-in Manager** を開き、再スキャンします。
@@ -27,18 +27,24 @@
 
 プラグインを削除する場合は、インストール先の対応する `.vst3` フォルダーを閉じた Cubase の状態で削除します。Cubase が読み込み中の DLL だけを削除しないでください。
 
-### macOS（未検証）
+### macOS（検証済み）
 
-ソースは Intel / Apple Silicon の universal binary を意図してビルド設定していますが、macOS 実機でのビルド、署名、DAW での読み込みをまだ検証していません。そのため、このリリースには macOS バイナリを同梱しません。
+Intel / Apple Silicon の universal binary として、macOS 実機でのビルドと DAW での読み込み・動作を確認済みです。ビルド手順は [BUILD.md](BUILD.md) を参照してください。
 
-検証済みの macOS ビルドを将来配布する場合、通常のユーザー別配置先は `~/Library/Audio/Plug-Ins/VST3/` です。全ユーザー用の `/Library/Audio/Plug-Ins/VST3/` は管理者権限が必要です。未署名・未公証バイナリは macOS のセキュリティ設定により読み込みを拒否される場合があります。
+DMG を開き、`.vst3` を同梱の `VST3` フォルダー（`/Library/Audio/Plug-Ins/VST3`、管理者パスワードが必要）へドラッグします。自分のユーザーだけに入れる場合は `~/Library/Audio/Plug-Ins/VST3/` へコピーしてください。
+
+通常のユーザー別配置先は `~/Library/Audio/Plug-Ins/VST3/` です。全ユーザー用の `/Library/Audio/Plug-Ins/VST3/` は管理者権限が必要です。> **注意:** macOS 版はコード署名・公証を行っていません。macOS のセキュリティ設定（Gatekeeper）により読み込みを拒否される場合は、配置後に次のコマンドで隔離属性を外してください。
+>
+> ```bash
+> xattr -dr com.apple.quarantine ~/Library/Audio/Plug-Ins/VST3/VST2413*.vst3
+> ```
 
 ## English
 
 ### Windows (verified)
 
 1. Extract `VST2413-*-windows-x86_64.zip`.
-2. Copy `vst2413p.vst3`, `vst2413r.vst3`, and `vst2413s.vst3` as complete **folders** to one of these locations.
+2. Copy `VST2413P.vst3`, `VST2413R.vst3`, and `VST2413S.vst3` as complete **folders** to one of these locations.
    - All users: `C:\Program Files\Common Files\VST3\`
    - Current user: `%LOCALAPPDATA%\Programs\Common\VST3\`
 3. Open **Studio > VST Plug-in Manager** in Cubase Pro 13 and rescan.
@@ -58,8 +64,14 @@ For a per-user installation:
 
 To uninstall, close Cubase and remove the corresponding `.vst3` directory from the chosen location. Do not remove only a DLL while Cubase has loaded it.
 
-### macOS (not verified)
+### macOS (verified)
 
-The sources are configured to build a universal Intel / Apple Silicon binary, but no macOS machine build, signing, or DAW load has been verified. Therefore no macOS binary is included in this release.
+Building a universal Intel / Apple Silicon binary and loading and playing it in a DAW have been verified on a real Mac. See [BUILD.md](BUILD.md) for build steps.
 
-For a future verified macOS build, the usual per-user location is `~/Library/Audio/Plug-Ins/VST3/`. `/Library/Audio/Plug-Ins/VST3/` is a system-wide location requiring administrator privileges. An unsigned and non-notarized binary can be rejected by macOS security controls.
+Open the DMG and drag the `.vst3` bundles onto the included `VST3` folder (`/Library/Audio/Plug-Ins/VST3`, requires an administrator password). To install for your user only, copy them to `~/Library/Audio/Plug-Ins/VST3/` instead.
+
+The usual per-user location is `~/Library/Audio/Plug-Ins/VST3/`. `/Library/Audio/Plug-Ins/VST3/` is a system-wide location requiring administrator privileges. > **Note:** The macOS build is not code-signed or notarized. If macOS security (Gatekeeper) refuses to load it, remove the quarantine attribute after installing:
+>
+> ```bash
+> xattr -dr com.apple.quarantine ~/Library/Audio/Plug-Ins/VST3/VST2413*.vst3
+> ```

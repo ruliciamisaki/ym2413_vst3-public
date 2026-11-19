@@ -11,7 +11,7 @@ param(
 $ErrorActionPreference = 'Stop'
 $BuildDir = [IO.Path]::GetFullPath($BuildDir)
 $Destination = [IO.Path]::GetFullPath($Destination)
-$names = if ($Plugin -eq 'all') { @('vst2413p', 'vst2413r', 'vst2413s') } else { @("vst2413$Plugin") }
+$names = if ($Plugin -eq 'all') { @('VST2413P', 'VST2413R', 'VST2413S') } else { @("VST2413$($Plugin.ToUpperInvariant())") }
 
 foreach ($name in $names) {
     $bundle = Join-Path $BuildDir "VST3\\$Configuration\\$name.vst3"

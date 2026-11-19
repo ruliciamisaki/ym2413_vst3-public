@@ -1,0 +1,8 @@
+{
+  "name": "vst3sdk-source",
+  "version-string": "v3.8.1_build_84",
+  "description": "Full Steinberg VST 3 SDK source tree (including VSTGUI and CMake modules) for add_subdirectory() based plug-in builds.",
+  "homepage": "https://github.com/steinbergmedia/vst3sdk",
+  "license": "MIT",
+  "supports": "windows | osx | linux"
+}
